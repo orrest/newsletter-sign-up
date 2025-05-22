@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Roboto Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Roboto Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+@theme {
+  --color-grey: #949494;
+  --color-blue-700: #36384D;
+  --color-blue-800: #242742;
+  --color-red: #FF6155;
+
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-700: 3.5rem;
+  --spacing-800: 4rem;
+  --spacing-900: 4.5rem;
+  --spacing-1300: 6.5rem;
+
+  --font-roboto-bold: 'Roboto Bold';
+  --font-roboto-regular: 'Roboto Regular';
+
+  --text-preset-1: 5.5rem;
+  --text-preset-1--line-height: 100%;
+  --text-preset-1--letter-spacing: 0;
+  --text-preset-1--font-weight: 700;
+  --text-preset-1--font-family: 'Roboto Bold';
+
+  --text-preset-2: 3.5rem;
+  --text-preset-2--line-height: 100%;
+  --text-preset-2--letter-spacing: 0;
+  --text-preset-2--font-weight: 700;
+
+  --text-preset-3: 1rem;
+  --text-preset-3--line-height: 150%;
+  --text-preset-3--letter-spacing: 0;
+  --text-preset-3--font-weight: 700;
+
+  --text-preset-4: 1rem;
+  --text-preset-4--line-height: 150%;
+  --text-preset-4--letter-spacing: 0;
+  --text-preset-4--font-weight: 400;
+
+  --text-preset-5: 0.75rem;
+  --text-preset-5--line-height: 150%;
+  --text-preset-5--letter-spacing: 0;
+  --text-preset-5--font-weight: 700;
+}
+
+@layer base {
+  * {
+    @apply p-0 m-0
+  }
+}
