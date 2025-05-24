@@ -1,21 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'Roboto Bold';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("fonts/Roboto-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: 'Roboto Regular';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("fonts/Roboto-Bold.ttf") format("truetype");
-}
 
 @theme {
   --color-grey: #949494;
@@ -34,38 +22,51 @@
   --spacing-900: 4.5rem;
   --spacing-1300: 6.5rem;
 
-  --font-roboto-bold: 'Roboto Bold';
-  --font-roboto-regular: 'Roboto Regular';
-
-  --text-preset-1: 5.5rem;
-  --text-preset-1--line-height: 100%;
-  --text-preset-1--letter-spacing: 0;
-  --text-preset-1--font-weight: 700;
-  --text-preset-1--font-family: 'Roboto Bold';
-
-  --text-preset-2: 3.5rem;
-  --text-preset-2--line-height: 100%;
-  --text-preset-2--letter-spacing: 0;
-  --text-preset-2--font-weight: 700;
-
-  --text-preset-3: 1rem;
-  --text-preset-3--line-height: 150%;
-  --text-preset-3--letter-spacing: 0;
-  --text-preset-3--font-weight: 700;
-
-  --text-preset-4: 1rem;
-  --text-preset-4--line-height: 150%;
-  --text-preset-4--letter-spacing: 0;
-  --text-preset-4--font-weight: 400;
-
-  --text-preset-5: 0.75rem;
-  --text-preset-5--line-height: 150%;
-  --text-preset-5--letter-spacing: 0;
-  --text-preset-5--font-weight: 700;
+  --font-roboto: "Roboto", sans-serif;
+  --font-roboto--font-variation-settings: "wdth" 100;
+  --font-roboto--font-style: normal;
 }
 
 @layer base {
   * {
-    @apply p-0 m-0
+    @apply p-0 m-0 box-border
+  }
+
+  html, body, main, app-root {
+    @apply w-full h-screen
+  }
+}
+
+@layer components {
+  button {
+    @apply rounded-xl bg-blue-800 px-12 py-4 text-white
+      hover:bg-gradient-to-r hover:from-[#FF6A3A] hover:to-[#FF527B]
+      hover:cursor-pointer
+      disabled:bg-grey disabled:pointer-events-none
+  }
+
+  input {
+    @apply border-grey placeholder-grey rounded-lg border-[1px] px-4 py-2 text-blue-800
+      focus:outline-blue-800
+  }
+
+  h1 {
+    @apply font-roboto font-bold leading-none tracking-normal text-[40px]
+  }
+
+  p {
+    @apply font-roboto font-normal leading-normal tracking-normal text-[16px]
+  }
+
+  small {
+    @apply font-roboto font-bold leading-normal tracking-normal text-[12px]
+  }
+
+  span {
+    @apply font-roboto font-bold leading-normal tracking-normal text-[16px]
+  }
+
+  input {
+    @apply font-roboto font-normal leading-normal tracking-normal text-[16px]
   }
 }
