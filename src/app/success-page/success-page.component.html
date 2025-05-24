@@ -1,19 +1,25 @@
-<article class="flex h-full flex-col justify-between px-8 pt-[28%] pb-[16%]">
-  <section class="flex flex-col gap-8">
-    <img
-      ngSrc="icon-success.svg"
-      class="h-16 w-16"
-      width="64"
-      height="64"
-      alt="Success icon"
-    />
-    <h1>Thanks for subscribing!</h1>
-    <p>
-      A confirmation email has been sent to <b>bash&#64;loremcompany.com</b>.
-      Please open it and click the button inside to confirm your subscription.
-    </p>
-  </section>
-  <button routerLink="/">
-    <span>Dismiss message</span>
-  </button>
+<article
+  class="bg:white flex h-full flex-col justify-center px-8 sm:bg-blue-700"
+>
+  <div
+    class="flex h-3/4 flex-col justify-between sm:h-auto sm:rounded-[2.25rem] sm:bg-white sm:p-16"
+  >
+    <section class="flex flex-col gap-8 sm:pb-8">
+      <img
+        ngSrc="icon-success.svg"
+        class="h-16 w-16"
+        width="64"
+        height="64"
+        alt="Success icon"
+      />
+      <h1>Thanks for subscribing!</h1>
+      <p>
+        A confirmation email has been sent to <b>bash&#64;loremcompany.com</b>.
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+    </section>
+    <button routerLink="/">
+      <span>Dismiss message</span>
+    </button>
+  </div>
 </article>
