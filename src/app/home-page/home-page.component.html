@@ -21,10 +21,10 @@
       />
     </picture>
 
-    <section class="flex flex-col px-6 pt-10 sm:px-0">
-      <h1 class="pb-6">{{ title }}</h1>
-      <p class="pb-6">{{ summary }}</p>
-      <div class="pb-6">
+    <section class="flex flex-col self-center px-6 pt-10 sm:px-0 md:pt-0">
+      <h1 class="pb-6 sm:pb-8 sm:text-[3.5rem]">{{ title }}</h1>
+      <p class="pb-6 sm:pb-8">{{ summary }}</p>
+      <div class="pb-6 sm:pb-8">
         @for (item of items; track $index) {
           <div class="flex flex-row gap-4 pb-3">
             <img
