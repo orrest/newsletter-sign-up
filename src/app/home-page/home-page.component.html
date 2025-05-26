@@ -1,15 +1,25 @@
 <article
-  class="flex h-full flex-col items-center sm:justify-center sm:bg-blue-700"
+  class="flex min-h-full flex-col items-center sm:justify-center sm:bg-blue-700"
 >
-  <div class="pb-4 sm:overflow-clip sm:rounded-4xl sm:bg-white sm:p-10">
-    <img
-      class="h-auto w-full sm:h-[22.375rem] sm:w-[33rem] sm:rounded-2xl sm:object-cover sm:object-top"
-      ngSrc="illustration-sign-up-mobile.svg"
-      width="375"
-      height="284"
-      priority
-      alt="sign up mobile"
-    />
+  <div
+    class="pb-4 sm:overflow-clip sm:rounded-4xl sm:bg-white sm:p-10 md:flex md:flex-row-reverse md:gap-16"
+  >
+    <picture>
+      <source
+        media="(min-width: 56.5rem)"
+        srcset="illustration-sign-up-desktop.svg"
+        width="400"
+        height="593"
+      />
+      <img
+        class="h-auto w-full sm:h-[22.375rem] sm:w-[33rem] sm:rounded-2xl sm:object-cover sm:object-top md:h-auto md:w-full"
+        src="illustration-sign-up-mobile.svg"
+        width="375"
+        height="284"
+        loading="eager"
+        alt="sign up mobile"
+      />
+    </picture>
 
     <section class="flex flex-col px-6 pt-10 sm:px-0">
       <h1 class="pb-6">{{ title }}</h1>

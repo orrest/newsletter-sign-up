@@ -19,8 +19,4 @@ export class HomePageComponent {
   ];
 
   email = new FormControl('', [Validators.email, Validators.required]);
-
-  onClick() {
-    console.log('clicked app-button');
-  }
 }

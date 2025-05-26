@@ -6,23 +6,12 @@
 
 @theme {
   --breakpoint-sm: 24rem;
-  --breakpoint-md: 38rem;
+  --breakpoint-md: 56.5rem;
 
   --color-grey: #949494;
   --color-blue-700: #36384D;
   --color-blue-800: #242742;
   --color-red: #FF6155;
-
-  --spacing-100: 0.5rem;
-  --spacing-200: 1rem;
-  --spacing-300: 1.5rem;
-  --spacing-400: 2rem;
-  --spacing-500: 2.5rem;
-  --spacing-600: 3rem;
-  --spacing-700: 3.5rem;
-  --spacing-800: 4rem;
-  --spacing-900: 4.5rem;
-  --spacing-1300: 6.5rem;
 
   --font-roboto: "Roboto", sans-serif;
   --font-roboto--font-variation-settings: "wdth" 100;
