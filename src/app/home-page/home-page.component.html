@@ -2,31 +2,25 @@
   class="flex min-h-full flex-col items-center sm:justify-center sm:bg-blue-700"
 >
   <div
-    class="pb-4 sm:overflow-clip sm:rounded-4xl sm:bg-white sm:p-10 md:flex md:flex-row-reverse md:gap-16"
+    class="pb-4 sm:overflow-clip sm:rounded-4xl sm:bg-white sm:p-10 md:flex md:h-[40.0625rem] md:w-[56.5rem] md:items-center md:gap-16 md:p-8"
   >
-    <picture>
-      <source
-        media="(min-width: 56.5rem)"
-        srcset="illustration-sign-up-desktop.svg"
-        width="400"
-        height="593"
-      />
-      <img
-        class="h-auto w-full sm:h-[22.375rem] sm:w-[33rem] sm:rounded-2xl sm:object-cover sm:object-top md:h-auto md:w-full"
-        src="illustration-sign-up-mobile.svg"
-        width="375"
-        height="284"
-        loading="eager"
-        alt="sign up mobile"
-      />
-    </picture>
+    <img
+      class="h-auto w-full sm:h-[22.375rem] sm:w-[33rem] sm:rounded-2xl sm:object-cover sm:object-top md:hidden"
+      ngSrc="illustration-sign-up-mobile.svg"
+      width="375"
+      height="284"
+      priority
+      alt="sign up mobile"
+    />
 
-    <section class="flex flex-col self-center px-6 pt-10 sm:px-0 md:pt-0">
-      <h1 class="pb-6 sm:pb-8 sm:text-[3.5rem]">{{ title }}</h1>
-      <p class="pb-6 sm:pb-8">{{ summary }}</p>
-      <div class="pb-6 sm:pb-8">
+    <section
+      class="flex flex-col gap-6 self-center px-6 pt-10 sm:gap-8 sm:px-0 md:w-[23.5rem] md:pt-0"
+    >
+      <h1 class="sm:text-[3.5rem]">{{ title }}</h1>
+      <p class="">{{ summary }}</p>
+      <div class="flex flex-col gap-3">
         @for (item of items; track $index) {
-          <div class="flex flex-row gap-4 pb-3">
+          <div class="flex flex-row gap-4">
             <img
               class="h-5 w-5"
               ngSrc="icon-list.svg"
@@ -40,27 +34,40 @@
       </div>
 
       <!--  Email input-->
-      <div class="flex flex-col pb-6">
-        <div class="flex flex-row justify-between pb-2">
-          <small>Email address</small>
-          @if (email.invalid && (email.dirty || email.touched)) {
-            <small class="text-red">Valid email required</small>
-          }
+      <form class="flex flex-col">
+        <div class="flex flex-col pb-6">
+          <label class="flex flex-row justify-between pb-2">
+            <small>Email address</small>
+            @if (email.invalid && (email.dirty || email.touched)) {
+              <small class="text-red">Valid email required</small>
+            }
+          </label>
+          <input
+            [ngClass]="{
+              'text-red focus:outline-red border-red-100 bg-red-100':
+                email.invalid && (email.dirty || email.touched),
+            }"
+            type="email"
+            placeholder="email@company.com"
+            [formControl]="email"
+          />
         </div>
-        <input
-          [ngClass]="{
-            'text-red focus:outline-red border-red-100 bg-red-100':
-              email.invalid && (email.dirty || email.touched),
-          }"
-          type="email"
-          placeholder="email@company.com"
-          [formControl]="email"
-        />
-      </div>
 
-      <button [disabled]="email.invalid" routerLink="/success">
-        <span> Subscribe to monthly newsletter </span>
-      </button>
+        <button
+          [disabled]="email.invalid && (email.touched || email.dirty)"
+          routerLink="/success"
+        >
+          <span> Subscribe to monthly newsletter </span>
+        </button>
+      </form>
     </section>
+
+    <img
+      class="hidden md:block"
+      ngSrc="illustration-sign-up-desktop.svg"
+      width="400"
+      height="593"
+      priority
+    />
   </div>
 </article>
