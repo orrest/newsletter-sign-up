@@ -18,7 +18,7 @@
     >
       <h1 class="sm:text-[3.5rem]">{{ title }}</h1>
       <p class="">{{ summary }}</p>
-      <div class="flex flex-col gap-3">
+      <div class="flex flex-col gap-2">
         @for (item of items; track $index) {
           <div class="flex flex-row gap-4">
             <img
@@ -47,6 +47,7 @@
               'text-red focus:outline-red border-red-100 bg-red-100':
                 email.invalid && (email.dirty || email.touched),
             }"
+            class="h-[3.5rem]"
             type="email"
             placeholder="email@company.com"
             [formControl]="email"

@@ -42,15 +42,15 @@
   }
 
   h1 {
-    @apply font-roboto font-bold leading-none tracking-normal text-[40px]
+    @apply font-roboto font-bold leading-none tracking-normal text-[40px] text-blue-800
   }
 
   p {
-    @apply font-roboto font-normal leading-normal tracking-normal text-[16px]
+    @apply font-roboto font-normal leading-normal tracking-normal text-[16px] text-blue-800
   }
 
   small {
-    @apply font-roboto font-bold leading-normal tracking-normal text-[12px]
+    @apply font-roboto font-bold leading-normal tracking-normal text-[12px] text-blue-800
   }
 
   span {
